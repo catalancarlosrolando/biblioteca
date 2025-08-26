@@ -1,0 +1,948 @@
+*,
+*::before,
+*::after {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+html, body,h1,h3,a{
+  height: 100% !important;
+  font-family: inherit !important;
+  background: none !important;
+  color: var(--foreground) !important;
+}
+
+.jb-scope.dark {
+  /* Tokens de color */
+  --background: #293242;
+  --background-card: #2f394b;            /* #222936 */
+  --foreground: 210 40% 96%;
+  --card-top: 219 23% 19%;
+  --card-bottom: 219 23% 15%;
+  --border: 219 23% 24%;
+  --primary: #216197;              /* #3D63DD */
+  --primary-strong: 226 70% 48%;
+  --muted: 215 20% 75%;
+
+  --radius: 12px;
+  --radius-card: 5px;
+  --container-w: 1200px;
+
+  --neo-shadow: 10px 10px 20px hsl(219 23% 10% / 0.55), -10px -10px 20px hsl(219 23% 24% / 0.65);
+  --neo-shadow-card: 5px 5px 4px #1b202a,
+             -5px -5px 4px #293242;
+  --neo-inset: inset 4px 4px 8px hsl(219 23% 10% / 0.6), inset -4px -4px 8px hsl(219 23% 24% / 0.6);
+  --ring-glow: 0 0 0 6px hsl(var(--primary) / 0.22);
+  --box-shadow: 20px 20px 60px #1d232e,
+             -20px -20px 60px #272f3e;
+  --background-linear: linear-gradient(145deg, #2b3342, #242c3a);
+  --border-radius: 50px;
+}
+
+
+.jb-scope.light {
+  --background: 207 63% 36%;             /* #216197 - fondo principal */
+  --background-card: #F8F8FF; 
+  --menu-color : 210 40% 96%;
+  --foreground: #222936;              /* negro sobre azul o blanco para textos */
+  --card-top: 207 63% 38%;              /* Variación más clara */
+  --card-bottom: 207 63% 34%;           /* Variación más oscura */
+  --border: 207 63% 30%;                /* Borde ligeramente más oscuro */
+
+  --primary: #222936 ;               /* #222936 - para botones oscuros */
+  --primary-strong: 219 23% 12%;        /* Versión más oscura para hover */
+  --muted: 0 0% 95%;                    /* Gris claro para textos secundarios */
+
+  --radius: 12px;
+  --container-w: 1200px;
+
+  --neo-shadow: 20px 20px 60px #1c5280,
+             -20px -20px 60px #2670ae;
+
+  --neo-inset: inset 4px 4px 8px hsl(207 63% 30% / 0.5),
+               inset -4px -4px 8px hsl(207 63% 60% / 0.6);
+
+  --ring-glow: 0 0 0 6px hsl(var(--primary) / 0.22);
+  --background-linear: linear-gradient(145deg, #959595, #676a70);
+}
+
+
+
+
+
+/* General Layout */
+body,
+.jb-scope {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif !important;
+  color: hsl(var(--foreground)) !important;
+  background-color: var(--background) !important;
+}
+
+.jb-scope-top{
+    
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif !important;
+  color: hsl(var(--foreground)) !important;
+  background-color: hsl(var(--background)) !important;
+}
+
+.jb-scope-top .menu-top{
+      list-style: none !important;
+
+}
+
+.jb-scope-top .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: var(--container-w) !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+
+}
+
+.jb-scope-top a {
+  display: block !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.jb-scope-top a:hover{
+    background: hsl(var(--border) / 0.5) !important;
+}
+
+.jb-scope .container {
+
+  max-width: var(--container-w) !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+.jb-scope .neo-surface {
+ background: linear-gradient(145deg, hsl(var(--card-top)), hsl(var(--card-bottom))) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+}
+/*  */
+
+
+.jb-scope .jb-nav-top{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px !important;
+  padding: 10px 16px !important;
+  margin-top: 12px !important;
+}
+
+
+
+/* Header / Nav */
+.jb-scope .jb-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+.jb-scope .jb-nav {
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 10px 16px !important;
+  margin-top: 12px !important;
+}
+
+.jb-scope .brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.jb-scope .logo-chip {
+  width: 40px !important;
+  height: 40px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+}
+
+.logo-background{
+    width: 30px;
+}
+
+
+
+.jb-scope .brand-text .sub {
+  display: block !important;
+  font-size: 12px !important;
+  color: hsl(var(--muted)) !important;
+  line-height: 1.1 !important;
+}
+
+.jb-scope .brand-text .main {
+  display: block !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+}
+
+/* Menu */
+.jb-scope .menu {
+  display: flex !important;
+  gap: 6px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  justify-self: center !important;
+}
+
+.jb-scope .menu a {
+  display: block !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  color: hsl(var(--menu-color)) !important;
+}
+
+.jb-scope .menu a:hover {
+  background: hsl(var(--border) / 0.5) !important;
+}
+
+/* Actions / Buttons */
+.jb-scope .actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.jb-scope .actions .logos {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.jb-scope .actions .logos img {
+  height: 32px !important;
+  width: auto !important;
+  border-radius: 9999px !important;
+  padding: 4px !important;
+}
+
+.jb-scope .actions .btn {
+  white-space: nowrap !important;
+}
+
+
+/*theme dark-ligth */
+.jb-scope .theme {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+
+/* Buttons */
+.jb-scope .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: filter .2s ease, transform .05s ease, box-shadow .2s ease !important;
+}
+
+.jb-scope .btn-neo {
+  background: var(--primary) !important;
+  color: white !important;
+  border-color: hsl(var(--primary)) !important;
+  
+}
+
+.jb-scope .btn-neo:hover {
+  filter: brightness(1.26) !important;
+}
+
+.jb-scope .btn-neo:active {
+  box-shadow: var(--neo-inset) !important;
+  transform: translateY(1px) !important;
+}
+
+.jb-scope .btn-outline {
+  background: transparent !important;
+  color: hsl(var(--foreground)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+.jb-scope .btn-outline:hover {
+  background: hsl(var(--border) / 0.5) !important;
+}
+
+/* Hero */
+
+
+.container_hero {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--container-w) !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+}
+
+.Hero-image{
+    width: 90%;
+}
+
+.Hero-image img{
+    width: 75%;
+}
+
+.jb-scope .jb-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  margin: 18px auto 0 !important;
+  max-width: var(--container-w) !important;
+  border: 1px solid hsl(var(--border)) !important;
+    border-radius: var(--radius) !important;
+    
+}
+
+.jb-scope .hero-inner {
+  padding: 48px 24px !important;
+}
+
+.jb-scope .hero-head h1 {
+  font-size: clamp(32px, 5vw, 56px) !important;
+  line-height: 1.05 !important;
+  margin: 0 !important;
+}
+
+.jb-scope .hero-head p {
+  margin: 12px 0 0 !important;
+  font-size: clamp(16px, 2.2vw, 20px) !important;
+  color: hsl(var(--foreground)) !important;
+  max-width: 62ch !important;
+}
+
+.jb-scope .hero-ctas {
+  margin-top: 20px !important;
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  justify-content: center;
+}
+
+/* Light effect */
+.jb-scope .ambient-light {
+  pointer-events: none !important;
+  position: absolute !important;
+  inset: 0 !important;
+  opacity: 0.45 !important;
+  background: radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.25), transparent 40%) !important;
+}
+
+/* Ocultar menú y mostrar hamburguesa en pantallas pequeñas */
+@media (max-width: 960px) {
+  .jb-scope .jb-nav {
+    grid-template-columns: auto auto !important;
+  }
+
+  .jb-scope .actions {
+    display: none !important
+;}
+
+    .Hero-image{
+        display: none;
+    }
+  .jb-scope .menu {
+    display: none !important;
+    grid-column: 1 / -1 !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    padding-top: 6px !important;
+  }
+
+  .jb-scope .menu.open {
+    display: flex !important;
+    width: 100%;
+  }
+
+  .jb-scope .menu a {
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .jb-scope .actions {
+    justify-self: end !important;
+    gap: 8px !important;
+  }
+
+  .jb-scope .hamburger {
+    display: inline-block !important;
+    width: 40px;
+    justify-self: end;
+    background-color:  var(--background);
+    border-style: none;
+  }
+}
+
+/* Mostrar menú y ocultar hamburguesa en pantallas grandes */
+@media (min-width: 961px) {
+  .jb-scope .menu {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 6px !important;
+    
+  }
+
+  .jb-scope .hamburger {
+    display: none !important;
+  }
+}
+
+
+/* -------------------------------  */
+/* Tarjeta de Rihuru y Catalogo CTA */
+/* -------------------------------  */
+
+
+.jb-scope .cta-cards{
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+  align-items: center;
+    margin: 18px auto 0 !important;
+    max-width: var(--container-w) !important;
+}
+.flip-card {
+  background-color: transparent !important;
+  width: 280px !important;
+  height: 420px !important;
+  perspective: 1000px !important;
+  margin: 20px 0px !important;
+}
+
+.flip-card-inner {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  text-align: center !important;
+  transition: transform 0.8s !important;
+  transform-style: preserve-3d !important;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) !important;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  backface-visibility: hidden !important;
+  border-radius: 20px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+  background: var(--background-card) !important;
+  padding: 20px !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.flip-card-front {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 30px !important;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 15px !important;
+  background: var(--primary)!important;
+}
+
+.profile-image {
+  width: 100% !important;
+  border-radius: 16px !important;
+  margin-bottom: 15px !important;
+}
+
+.profile-name {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  margin-bottom: 5px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.profile-description {
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  margin-bottom: 15px !important;
+}
+
+
+.follow-btn {
+  background: #f3f4f6 !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #111827 !important;
+  transition: background 0.1s ease !important;
+  text-decoration: none !important;
+}
+
+.follow-btn:hover {
+  background: #e5e7eb !important;
+}
+
+.back-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: white !important;
+}
+
+.back-text {
+  font-size: 14px !important;
+  color: #c4c4c4 !important;
+  text-align: center !important;
+  max-width: 200px !important;
+}
+
+.jb-scope .hero-head-cards{
+  width: 500px !important;
+  
+}
+
+.jb-scope .hero-head-cards h1 {
+  font-size: clamp(32px, 5vw, 56px) !important;
+  line-height: 1.05 !important;
+  margin: 0 !important;
+  height: auto !important;
+  padding-left: 24px !important;
+  
+}
+
+.jb-scope .hero-head-cards p {
+  margin: 12px 0 0 !important;
+  font-size: clamp(16px, 2.2vw, 20px) !important;
+  color: hsl(var(--muted)) !important;
+  max-width: 62ch !important;
+  padding-left: 24px !important;
+}
+
+
+
+
+
+.jb-scope .jb-cards{
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 18px auto 0 !important;
+    max-width: var(--container-w) !important;
+
+}
+
+.jb-scope .jb-cards-header{
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+
+}
+
+.jb-scope .jb-cards-header p{
+  padding-left: 24px !important;
+}
+
+.jb-scope .jb-cards-header h2 {
+    font-size: clamp(32px, 5vw, 56px) !important;
+    line-height: 1.05 !important;
+    margin: 0 !important;
+    color: var(--primary);
+    padding-left: 24px !important;
+}
+.jb-scope .jb-grid{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px !important;
+  margin-bottom: 50px !important;
+
+
+}
+
+/* Card Styles */
+.jb-card {
+  position: relative;
+  border-radius: 12px;
+  background: var(--background-card);
+  box-shadow: 0 10px 24px hsl(220 40% 2% / 0.35), inset 0 1px 0 hsl(0 0% 100% / 0.8);
+  /*color: hsl(220 18% 15%);*/
+  overflow: clip;
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 350px !important;
+  margin-bottom: 30px !important;
+}
+
+/* Card Hover Effect */
+.jb-card:hover {
+  transform: translateY(-4px) rotateX(2deg);
+  box-shadow: 0 18px 19px hsl(220 40% 2% / 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.8);
+}
+
+
+
+/* Ribbon styles */
+.jb-ribbon {
+  position: absolute;
+  top: 20px;
+  left: 86%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.jb-ribbon img{
+  width: 60px;
+  border-radius: 40px !important;
+}
+
+/* Card Body */
+.jb-card-body {
+  padding: 0px 0px 30px 0px !important;
+}
+
+/* Card Title */
+.jb-scope .jb-card-body h3{
+  color: #FBFDFF;
+  padding: 15px 15px !important;
+  
+
+}
+
+/* Card Text */
+.jb-card-text {
+  color: hsl(220 12% 35%);
+  line-height: 1.55;
+  font-size: 14.5px;
+  margin: 0;
+}
+
+.jb-card-img{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 50px;
+  background: no-repeat center/100% url(https://blogbiblio.unsj.edu.ar/wp-content/uploads/2025/08/eucs.jpg);
+  
+
+}
+
+.jb-scope .jb-card-mail{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-left: 15px !important;
+}
+
+.jb-card-mail i{
+  font-size: 22px !important;
+}
+
+.jb-scope .jb-card-footer{
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  border-radius: 30px !important;
+  margin: 15px !important;
+  padding: 5px !important;
+  transition: background 1.3s ease !important;
+  position: relative !important;
+  /*overflow: hidden !important; */
+}
+
+.jb-scope .jb-card-footer-text{
+  padding: 0px 90px !important;
+
+}
+
+.jb-card-footer:has(.menu-btn:hover)::before{
+  transform: scaleX(1);
+}
+
+
+/* Social Network button */
+.menu-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu-btn {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 30px !important;
+    border:none !important;
+    background-color: var(--primary) !important;
+    color: white !important;
+    font-size: 28px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-bottom: 30px;
+  }
+
+  .menu-btn:hover {
+    background-color: #305bb0 !important;
+  }
+
+  .dropdowneucs {
+    display: none !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    position: absolute !important;
+    bottom: 70px !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  .dropdowneucs.show {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transform: translateY(0) !important;
+  }
+
+  .dropdowneucs a {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 30px !important;
+    border: 2px solid !important;
+    border-color: hsl(var(--primary) / 0.22) !important;
+    background-color: #FBFDFF !important;
+    color: hsl(var(--background));
+    font-size: 20px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1) !important;
+    text-decoration: none !important;
+
+    
+  }
+
+  .dropdowneucs a:hover {
+    background-color: #305bb0 !important;
+  }
+   
+   .dropdowneucs a:hover i {
+    color: #ffffff !important;
+  }
+
+  .dropdowneucs i {
+    font-size: 22px !important;
+    line-height: 1 !important;
+  }
+
+
+.tooltip {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: -180%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #386BD1;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  z-index: 1000;
+}
+
+/* Flecha apuntando hacia el ícono */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  border: 5px solid transparent;
+  border-right-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+/* Inicio del FOOTER */
+
+
+
+.footer{
+  margin: 18px auto  !important;
+  max-width: var(--container-w);
+}
+
+.jb-scope .footer-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center !important;
+  margin: 20px 0px !important;
+  gap: 30px !important;
+
+}
+
+.container-footer{
+  width: 350px !important;
+}
+.jb-scope .footer-h4{
+  margin-bottom: 20px !important  ;
+}
+
+.footer-icon{
+   display: flex;
+    justify-content: flex-start;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 10px 0px !important;
+
+}
+
+.footer-icon a{
+  color: hsl(var(--foreground));
+}
+
+
+
+/*   btoton nuevo de cambio de color */
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  user-select: none;
+  padding: 0px 12px !important;
+}
+
+.theme-label {
+  font-size: 1.em;
+  font-weight: 300;
+  color: #e0e0e0 !important;
+  transition: color 0.3s;
+}
+
+.theme-switch {
+  width: 64px;
+  height: 32px;
+  background: #222;
+  border: none;
+  border-radius: 32px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.theme-switch-thumb {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background: #ffd600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2em;
+  transition: left 0.3s, background 0.3s;
+  z-index: 2;
+}
+
+.theme-switch.dark .theme-switch-thumb {
+  left: 36px;
+  background: #2da7f8;
+  color: #222;
+}
+
+.theme-switch .fa-moon {
+  display: block;
+}
+.theme-switch.dark .fa-moon {
+  display: none;
+}
+.theme-switch.dark .fa-sun {
+  display: block;
+}
+.theme-switch .fa-sun {
+  display: none;
+}
+
+.theme-switch.dark {
+  background: #444;
+}
+
+.theme-switch-wrapper .theme-label-light {
+  color: #222;
+}
+.theme-switch.dark ~ .theme-label-dark {
+  color: #2da7f8 !important;
+}
+.theme-switch.dark ~ .theme-label-light {
+  color: #888;
+}

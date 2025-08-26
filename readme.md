@@ -1,0 +1,1 @@
+[] colocar el boton para redes sociales de las tarjetas no como click, si no como hover.
