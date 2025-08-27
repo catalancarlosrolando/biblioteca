@@ -20,13 +20,16 @@ html, body,h1,h3,a{
   --card-top: 219 23% 19%;
   --card-bottom: 219 23% 15%;
   --border: 219 23% 24%;
-  --primary: #216197;              /* #3D63DD */
+  --primary: #222936;              /* #3D63DD */
+  --secondary: #216197;
+
   --primary-strong: 226 70% 48%;
   --muted: 215 20% 75%;
   --footer-background: #2f394b;
   --radius: 12px;
   --radius-card: 5px;
   --container-w: 1200px;
+  --card-bg: #2f394b;
 
   --neo-shadow: 10px 10px 20px hsl(219 23% 10% / 0.55), -10px -10px 20px hsl(219 23% 24% / 0.65);
   --neo-shadow-card: 5px 5px 4px #1b202a,
@@ -42,17 +45,20 @@ html, body,h1,h3,a{
 
 .jb-scope.light {
   --background: 207 63% 36%;             /* #216197 - fondo principal */
-  --background-card: #F8F8FF; 
+  --background-card: #e1e1e1; 
   --menu-color : 210 40% 96%;
   --foreground: #222936;              /* negro sobre azul o blanco para textos */
   --card-top: 207 63% 38%;              /* Variación más clara */
   --card-bottom: 207 63% 34%;           /* Variación más oscura */
   --border: 207 63% 30%;                /* Borde ligeramente más oscuro */
 
-  --primary: #222936 ;               /* #222936 - para botones oscuros */
+  --primary: #216197 ;
+  --secondary: #222936;   /* #222936 - para botones oscuros */
+
   --primary-strong: 219 23% 12%;        /* Versión más oscura para hover */
   --muted: 0 0% 95%;                    /* Gris claro para textos secundarios */
   --footer-background: #2670ae;
+  --card-bg: #e1e1e1;
 ;
   --radius: 12px;
   --container-w: 1200px;
@@ -512,7 +518,7 @@ body,
 }
 
 .follow-btn:hover {
-  background: #e5e7eb !important;
+  background: var(--secondary) !important;
 }
 
 .back-title {
@@ -551,7 +557,9 @@ body,
 }
 
 
-
+.card-bg{
+  background: var(--card-bg);
+}
 
 
 .jb-scope .jb-cards{
@@ -559,7 +567,6 @@ body,
     overflow: hidden !important;
     margin: 18px auto 0 !important;
     max-width: var(--container-w) !important;
-    background: var(--background-card) !important;
 
 }
 
@@ -784,8 +791,8 @@ body,
 .tooltip::after {
   content: attr(data-tooltip);
   position: absolute;
-  top: 50%;
-  left: -180%;
+  top: -20%;
+  left: -200%;
   transform: translateY(-50%);
   background-color: white;
   color: #386BD1;
@@ -798,6 +805,7 @@ body,
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border: 1px solid #e0e0e0;
   z-index: 1000;
+  padding: 0px 10px !important;
 }
 
 /* Flecha apuntando hacia el ícono */
@@ -814,6 +822,7 @@ body,
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 1001;
+  padding: auto;
 }
 
 .tooltip:hover::after,
