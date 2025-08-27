@@ -14,6 +14,7 @@ html, body,h1,h3,a{
 
 .jb-scope.dark {
   /* Tokens de color */
+  --faq-background: #222936;
   --background: #293242;
   --background-card: #2f394b;            /* #222936 */
   --foreground: 210 40% 96%;
@@ -26,7 +27,7 @@ html, body,h1,h3,a{
   --primary-strong: 226 70% 48%;
   --muted: 215 20% 75%;
   --footer-background: #2f394b;
-  --radius: 12px;
+  --radius: 10px;
   --radius-card: 5px;
   --container-w: 1200px;
   --card-bg: #2f394b;
@@ -44,6 +45,7 @@ html, body,h1,h3,a{
 
 
 .jb-scope.light {
+  --faq-background: #e1e1e1;
   --background: 207 63% 36%;             /* #216197 - fondo principal */
   --background-card: #e1e1e1; 
   --menu-color : 210 40% 96%;
