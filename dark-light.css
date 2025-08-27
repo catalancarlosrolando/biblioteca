@@ -7,7 +7,6 @@
 }
 
 html, body,h1,h3,a{
-  height: 100% !important;
   font-family: inherit !important;
   background: none !important;
   color: var(--foreground) !important;
@@ -24,7 +23,7 @@ html, body,h1,h3,a{
   --primary: #216197;              /* #3D63DD */
   --primary-strong: 226 70% 48%;
   --muted: 215 20% 75%;
-
+  --footer-background: #2f394b;
   --radius: 12px;
   --radius-card: 5px;
   --container-w: 1200px;
@@ -53,7 +52,8 @@ html, body,h1,h3,a{
   --primary: #222936 ;               /* #222936 - para botones oscuros */
   --primary-strong: 219 23% 12%;        /* Versión más oscura para hover */
   --muted: 0 0% 95%;                    /* Gris claro para textos secundarios */
-
+  --footer-background: #2670ae;
+;
   --radius: 12px;
   --container-w: 1200px;
 
@@ -559,6 +559,7 @@ body,
     overflow: hidden !important;
     margin: 18px auto 0 !important;
     max-width: var(--container-w) !important;
+    background: var(--background-card) !important;
 
 }
 
@@ -652,9 +653,10 @@ body,
 }
 
 .jb-card-img{
-  width: 100%;
+  width: 95%;
   height: 300px;
-  margin-bottom: 50px;
+  margin: 10px 50px 10px 10px !important;
+  border-radius: 10px;
   background: no-repeat center/100% url(https://blogbiblio.unsj.edu.ar/wp-content/uploads/2025/08/eucs.jpg);
   
 
@@ -825,19 +827,26 @@ body,
 
 /* Inicio del FOOTER */
 
-
-
-.footer{
-  margin: 18px auto  !important;
-  max-width: var(--container-w);
+.footer-bg {
+  width: 100vw;
+  background: var(--footer-background) !important;
+  margin: 0;
+  padding: 0;
 }
 
-.jb-scope .footer-grid{
+.footer-bg .footer{
+  margin: 0px auto  !important;
+  max-width: var(--container-w);
+  padding: 20px 0px !important;
+  color: hsl(var(--menu-color) )!important;
+}
+
+.footer-grid{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center !important;
+  align-items: start !important;
   margin: 20px 0px !important;
   gap: 30px !important;
 
@@ -845,6 +854,10 @@ body,
 
 .container-footer{
   width: 350px !important;
+}
+
+.container-footer img{
+  width: 100px !important;
 }
 .jb-scope .footer-h4{
   margin-bottom: 20px !important  ;
