@@ -6,16 +6,16 @@ export const faqData = [
         q: "¿Cómo obtengo usuario y contraseña para acceder a las bibliotecas digitales?",
         a: [
           "Primero debes registrarte en el Campus Virtual UNSJ.",
-          "• Hace clic en Registrarse, completa el formulario y espera el mail de confirmación (aprox. 1 día).",
-          "• Con usuario y clave puedes ingresar al Campus Virtual y acceder desde el botón “Bibliotecas” a un listado donde encontrarás Biblioteca eLibro y Biblioteca CID.",
+          "Hace clic en Registrarse, completa el formulario y espera el mail de confirmación (aprox. 1 día).",
+          "Con usuario y clave puedes ingresar al Campus Virtual y acceder desde el botón “Bibliotecas” a un listado donde encontrarás Biblioteca eLibro y Biblioteca CID.",
           "Una vez dentro del campus virtual con tu usuario y contraseña, en la barra superior del aula virtual vas a ver el botón BIBLIOTECAS, ingresas y te aparecerá un listado: Biblioteca (accederás a las herramientas que ofrecen las bibliotecas de la UNSJ, a sus contactos entre otros), ELibro y CID."
         ]
       },
       {
         q: "¿Qué diferencia hay entre eLibro y CID?",
         a: [
-          "• CID: no requiere registro adicional, toma tus datos del campus. En el catálogo que te ofrece solo se accede a los libros marcados como “Consorcio CID”.",
-          "• eLibro: puede usarse sin registro, pero si creas cuenta personal accedes a más herramientas (leer enlaces de libros que te envíen, acciones como subrayar, marcar, guardar en estantes, anotar, compartir enlaces de libros, etc.)."
+          "CID: no requiere registro adicional, toma tus datos del campus. En el catálogo que te ofrece solo se accede a los libros marcados como “Consorcio CID”.",
+          "eLibro: puede usarse sin registro, pero si creas cuenta personal accedes a más herramientas (leer enlaces de libros que te envíen, acciones como subrayar, marcar, guardar en estantes, anotar, compartir enlaces de libros, etc.)."
         ]
       }
     ]
@@ -73,9 +73,9 @@ export const faqData = [
         q: "¿Dónde descargo mis certificados de cursos?",
         a: [
           "Desde el aula virtual “Oficina de Entrega de Certificados” en el Campus Virtual UNSJ.",
-          "• Ingresa con tu usuario (DNI) y contraseña.",
-          "• Si es tu primer ingreso, el sistema pedirá cambiar la clave.",
-          "• Allí encontrarás los certificados disponibles con código QR de verificación."
+          "Ingresa con tu usuario (DNI) y contraseña.",
+          "Si es tu primer ingreso, el sistema pedirá cambiar la clave.",
+          "Allí encontrarás los certificados disponibles con código QR de verificación."
         ]
       },
       {

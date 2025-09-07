@@ -177,16 +177,20 @@ body,
 }
 
 .jb-scope .logo-chip {
-  width: 40px !important;
-  height: 40px !important;
-  display: grid !important;
-  place-items: center !important;
+  width: 45px !important;
+  height: 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   border-radius: 9999px !important;
   font-weight: 700 !important;
+  padding: 5px !important;
 }
 
 .logo-background{
-    width: 30px;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
 }
 
 
@@ -945,7 +949,7 @@ body,
 }
 
 .theme-label {
-  font-size: 1.em;
+  font-size: 0.8em;
   font-weight: 300;
   color: #e0e0e0 !important;
   transition: color 0.3s;
