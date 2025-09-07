@@ -1,0 +1,48 @@
+.trayecto-info {
+  max-width: 1200px;
+  margin: 2rem auto !important;
+  padding: 0 1rem !important;
+}
+
+.trayecto-info h1 {
+  text-align: center;
+  margin-bottom: 2rem !important;
+  color: var(--foreground);
+}
+
+.trayecto-info h2 {
+  color: var(--foreground);
+  margin: 1.5rem 0 1rem !important;
+}
+
+.contact-info, .general-info, .inscription-info {
+  margin-bottom: 2rem !important;
+}
+
+.genially-embed {
+  margin: 1rem 0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.inscription-button {
+  display: inline-block;
+  background: var(--primary) !important;
+  color: white !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem !important;
+  transition: background 0.3s ease;
+}
+
+.inscription-button:hover {
+  background: var(--secondary) !important;
+}
+
+@media (max-width: 768px) {
+  .trayecto-info {
+    padding: 0 0.5rem !important;
+  }
+}
