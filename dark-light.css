@@ -17,7 +17,7 @@ html, body,h1,h3,a{
   --faq-background: #222936;
   --faq-Question: #e1e1e1;
   --faq-Question-background: #2f394b;
-  --faq-number :#216197;
+  --faq-number :#216196;
   --background: #293242;
   --background-card: #2f394b;            /* #222936 */
   --foreground: 210 40% 96%;
@@ -25,7 +25,7 @@ html, body,h1,h3,a{
   --card-bottom: 219 23% 15%;
   --border: 219 23% 24%;
   --primary: #222936;              /* #3D63DD */
-  --secondary: #216197;
+  --secondary: #216196;
 
   --primary-strong: 226 70% 48%;
   --muted: 215 20% 75%;
@@ -51,7 +51,7 @@ html, body,h1,h3,a{
   --faq-background: #e1e1e1;
   --faq-Question: #222936;
   --faq-Question-background: #c2c1c1;
-  --faq-number :#216197;
+  --faq-number :#216196;
   --background: 207 63% 36%;             /* #216197 - fondo principal */
   --background-card: #e1e1e1; 
   --menu-color : 210 40% 96%;
@@ -60,7 +60,7 @@ html, body,h1,h3,a{
   --card-bottom: 207 63% 34%;           /* Variación más oscura */
   --border: 207 63% 30%;                /* Borde ligeramente más oscuro */
 
-  --primary: #216197 ;
+  --primary: #216196 ;
   --secondary: #222936;   /* #222936 - para botones oscuros */
 
   --primary-strong: 219 23% 12%;        /* Versión más oscura para hover */
