@@ -41,6 +41,40 @@
   background: var(--secondary) !important;
 }
 
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.loader-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--primary);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @media (max-width: 768px) {
   .trayecto-info {
     padding: 0 0.5rem !important;
