@@ -15,6 +15,9 @@ html, body,h1,h3,a{
 .jb-scope.dark {
   /* Tokens de color */
   --faq-background: #222936;
+  --faq-Question: #e1e1e1;
+  --faq-Question-background: #2f394b;
+  --faq-number :#216197;
   --background: #293242;
   --background-card: #2f394b;            /* #222936 */
   --foreground: 210 40% 96%;
@@ -46,6 +49,9 @@ html, body,h1,h3,a{
 
 .jb-scope.light {
   --faq-background: #e1e1e1;
+  --faq-Question: #222936;
+  --faq-Question-background: #c2c1c1;
+  --faq-number :#216197;
   --background: 207 63% 36%;             /* #216197 - fondo principal */
   --background-card: #e1e1e1; 
   --menu-color : 210 40% 96%;
@@ -245,7 +251,46 @@ body,
   white-space: nowrap !important;
 }
 
+/* Ocultar submenús por defecto */
+#jb-menu .submenu {
+  display: none;
+  position: absolute;
+  background: var(--primary);
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: var(--radius);
+}
 
+/* Estilos de los items */
+#jb-menu .submenu li {
+  padding: 8px 12px;
+}
+
+#jb-menu li {
+  position: relative;
+}
+
+/* Mostrar submenú al pasar el mouse */
+#jb-menu li:hover > .submenu {
+  display: block;
+  width: max-content;
+}
+
+/* Solo los enlaces con submenu */
+#jb-menu a.has-submenu::after {
+  content: " ▼";  /* flecha hacia abajo */
+  font-size: 0.8em;
+  margin-left: 5px !important;
+}
+
+#jb-menu li:hover > a.has-submenu::after {
+  content: " ▲";  /* opcional: cambia cuando está abierto */
+}
+
+
+
+/* -------------------------------------FIN DE MENUES ------------------------------------ */
 /*theme dark-ligth */
 .jb-scope .theme {
   display: flex !important;
@@ -586,7 +631,7 @@ body,
     font-size: clamp(32px, 5vw, 56px) !important;
     line-height: 1.05 !important;
     margin: 0 !important;
-    color: var(--primary);
+    color: var(--foreground) !important;
     padding-left: 24px !important;
 }
 .jb-scope .jb-grid{

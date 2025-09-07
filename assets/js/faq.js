@@ -216,16 +216,24 @@ function renderFAQ(array) {
   faqContainer.innerHTML = '';
   array.forEach(item => {
     const faqItem = createElem('div', 'faq-item');
-    const question = createElem('div', 'faq-question', item.question);
+    const questionContainer = createElem('div', 'faq-question');
+    
+    // Add ID number span
+    const idSpan = createElem('span', 'faq-id', item.id);
+    const questionText = createElem('span', 'faq-question-text', item.question);
+    
+    questionContainer.appendChild(idSpan);
+    questionContainer.appendChild(questionText);
+    
     const answer = createElem('div', 'faq-answer');
     answer.appendChild(renderAnswer(item.answer));
 
     // Mostrar/ocultar con animación
-    question.addEventListener('click', () => {
+    questionContainer.addEventListener('click', () => {
       faqItem.classList.toggle('open');
     });
 
-    faqItem.appendChild(question);
+    faqItem.appendChild(questionContainer);
     faqItem.appendChild(answer);
     faqContainer.appendChild(faqItem);
   });
