@@ -952,8 +952,8 @@ body,
 }
 
 .theme-switch {
-  width: 64px;
-  height: 32px;
+  width: 51px;
+  height: 23px;
   background: #222;
   border: none;
   border-radius: 32px;
@@ -970,15 +970,15 @@ body,
   position: absolute;
   left: 4px;
   top: 4px;
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   background: #ffd600;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 0.9em;
   transition: left 0.3s, background 0.3s;
   z-index: 2;
 }
