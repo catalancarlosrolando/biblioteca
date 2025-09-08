@@ -2,6 +2,29 @@ body {
   background: var(--faq-background);
   color: var(--foreground);
 }
+
+
+.faq-container-title{
+  max-width: var(--container-w);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  margin: 2rem auto !important;
+  background: no-repeat center/100% url("https://blogbiblio.unsj.edu.ar/wp-content/uploads/2025/09/FQ.png");
+  
+  border-radius: 10px;
+  box-shadow: var(--neo-shadow-card, 0 4px 8px rgba(0,0,0,0.13));
+  padding: 2rem !important;
+}
+
+.faq-title{
+    width: 50%;
+}
+.faq-title h2,p {
+    color: #ccc;
+    margin-bottom: 1em !important;
+}
+
 .faq-container {
   max-width: var(--container-w);
   margin: 2rem auto !important;
@@ -126,4 +149,29 @@ body {
 
 .close-modal:hover {
   color: #ccc;
+}
+
+
+/* faq search */
+
+.faq-search-container {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 1.5em !important;
+}
+
+.faq-search-input {
+  width: 100% !important;
+  max-width: 400px !important;
+  padding: 0.6em 1em !important;
+  border: 1px solid #bbb !important;
+  border-radius: 4px !important;
+  font-size: 1em !important;
+  transition: border-color 0.2s !important;
+  color: #222 !important;
+}
+
+.faq-search-input:focus {
+  outline: none !important;
+  border-color: #0078d7 !important;
 }
