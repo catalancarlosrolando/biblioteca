@@ -79,4 +79,63 @@
   .trayecto-info {
     padding: 0 0.5rem !important;
   }
+  .img-sied{
+    display: none;
+  }
+}
+
+.faq-container-title {
+  max-width: var(--container-w);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 0 0 auto auto !important;
+  background: #216196;
+  border-radius: 10px;
+  box-shadow: var(--neo-shadow-card, 0 4px 8px rgba(0,0,0,0.13));
+  padding: 2rem !important;
+  gap: 1rem !important;
+}
+
+.faq-title {
+  flex: 1;
+  min-width: 300px !important;
+  padding: 1rem !important;
+}
+
+.faq-title h2, 
+.faq-title h4 {
+  color: #ccc;
+  margin-bottom: 1em !important;
+}
+
+.sied {
+  flex: 1;
+  min-width: 300px !important;
+  padding: 1rem !important;
+}
+
+.img-sied {
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.img-sied img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .faq-container-title {
+    flex-direction: column !important;
+  }
+
+  .faq-title,
+  .sied {
+    width: 100% !important;
+    padding: 0.5rem !important;
+  }
 }
