@@ -250,3 +250,24 @@ h1 {
 .faq-question-text {
   flex: 1;
 }
+
+.faq-container-title{
+  max-width: var(--container-w);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  margin: 2rem auto !important;
+  background: no-repeat center/100% url("https://blogbiblio.unsj.edu.ar/wp-content/uploads/2025/09/FQ.png");
+  
+  border-radius: 10px;
+  box-shadow: var(--neo-shadow-card, 0 4px 8px rgba(0,0,0,0.13));
+  padding: 2rem !important;
+}
+
+.faq-title{
+    width: 50%;
+}
+.faq-title h2,p {
+    color: #ccc;
+    margin-bottom: 1em !important;
+}

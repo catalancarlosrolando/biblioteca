@@ -42,8 +42,34 @@ body {
   margin-bottom: .3rem !important;
   color: #333 ;
 }
+
+.faq-container-title{
+  max-width: var(--container-w);
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  margin: 2rem auto !important;
+  background: no-repeat center/100% url("https://blogbiblio.unsj.edu.ar/wp-content/uploads/2025/09/FAQ_FONDO-SIED.png");
+  
+  border-radius: 10px;
+  box-shadow: var(--neo-shadow-card, 0 4px 8px rgba(0,0,0,0.13));
+  padding: 2rem !important;
+}
+
+.faq-title{
+    width: 50%;
+}
+.faq-title h2,p {
+    color: white;
+    margin-bottom: 1em !important;
+}
+
+
+
 @media (max-width: 600px) {
   .faq-container {
     padding: .5rem !important;
   }
 }
+
+
