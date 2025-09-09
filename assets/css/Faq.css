@@ -255,7 +255,6 @@ h1 {
   max-width: var(--container-w);
   display: flex;
   flex-direction: column;
-  height: 300px;
   margin: 2rem auto !important;
   background: no-repeat center/100% url("https://blogbiblio.unsj.edu.ar/wp-content/uploads/2025/09/FQ.png");
   
@@ -265,9 +264,10 @@ h1 {
 }
 
 .faq-title{
-    width: 50%;
+    width: 70%;
 }
 .faq-title h2,p {
     color: #ccc;
     margin-bottom: 1em !important;
+    font-size: clamp(13px, 1vw, 21px) !important;
 }

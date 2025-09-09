@@ -1,6 +1,6 @@
 export const menuData = [
   {
-    title: "Actas",
+    title: "Reuniones de Junta",
     links: [
       {
         text: "Actas de la Junta de Bibliotecarios",

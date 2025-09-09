@@ -18,11 +18,12 @@ body {
 }
 
 .faq-title{
-    width: 50%;
+    width: 70%;
 }
 .faq-title h2,p {
     color: #ccc;
     margin-bottom: 1em !important;
+    font-size: clamp(13px, 1vw, 21px) !important;
 }
 
 .faq-container {

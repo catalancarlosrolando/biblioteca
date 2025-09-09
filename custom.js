@@ -30,4 +30,27 @@
       light.style.background = `radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.25), transparent 40%)`;
     });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('#jb-menu > li > a.has-submenu');
+    
+    menuItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          
+          // Close other submenus
+          menuItems.forEach(otherItem => {
+            if (otherItem !== this) {
+              otherItem.parentElement.classList.remove('active');
+            }
+          });
+          
+          // Toggle current submenu
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  });
 })();
